@@ -6,7 +6,74 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <header id=Portada>
+    </header>
+    <nav>
+      <ul>
+        <li><a class="barra" href="#">Productos</a></li>
+        <li><a class="barra" href="#">Costos Delivery</a></li>
+        <li><a class="barra" href="#">Contacto</a></li>
+        <li><a class="barra" href="#">Mi cuenta</a></li>
+        <li><a href="#"> <img id="carrito"src="https://i.ibb.co/92k3dtz/carrito.png" alt="carrito" ></a></li>
+        <li id="redes"><img src="https://i.ibb.co/b70p489/redes.png" alt="redes" > </li>
+      </ul>
+    </nav>
+    <section>
+     
+      <form  class="form" autocomplete="off" id="formulario" >  
+        <fieldset>
+          <label for ="numero-tarjeta">Número de Tarjeta</label>
+          <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="numero" maxlength="4"/>
+          <input type="text" id="numero-tarjeta1" name="numero-tarjeta" class="numero" maxlength="4"/>
+          <input type="text" id="numero-tarjeta2" name="numero-tarjeta"  class="numero" maxlength="4"/>
+          <input type="text" id="numero-tarjeta3" name="numero-tarjeta" class="numero" maxlength="4"/>
+        </fieldset>
+        <fieldset>
+          <label for="titular">Titular de la tarjeta</label>
+          <input type="text" id="titular" name="titular" placeholder="Nombre y Apellido"/>
+        </fieldset>
+        <fieldset>
+          <label for="expiracion">Fecha Expiración</label>
+          <select id="mes-expiracion">
+            <option>Mes</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <select id="age-expiracion">
+            <option>Año</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" maxlength="3"/>
+        </fieldset>
+        <button id="boton"type="submit"  class="boton" >VERIFICAR </button>
+      </form>
+      <div id="card">
+        <img src="https://i.ibb.co/47Lgsvn/credito.png">
+      </div>
+    </section>
     <main></main>
     <footer></footer>
     <script src="index.js" type="module"></script>

@@ -1,0 +1,97 @@
+#Portada{
+  
+    margin: 0px;
+    height: 220px;
+    background: url("https://i.ibb.co/Qd5TpzP/portada.png") round ;
+}
+nav{
+  
+    background-color:#FCE2EE;
+}
+li{
+    
+    display: inline-block;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.barra{
+    color: slategrey;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 8px 60px;
+}
+nav ul li a:hover{
+    background-color:#d1a1b2;
+}
+#redes{
+    float: right;
+    padding: 4px;
+}
+#carrito{
+       position: absolute;
+       top: 235px;
+       padding:0px 60px;
+}
+section{
+    background: url(https://i.ibb.co/L1XhpLB/fondo.png);
+    height: 650px;
+}
+label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+fieldset{
+    border: none;
+    position: relative;
+}
+.form{
+    position: relative;
+    top:  20%;
+    width: 23%;
+    margin: 0 auto;
+    padding: 20px;
+    border:#585858 3px solid ;
+    border-radius: 15px;
+    display: block;
+    
+}
+select{
+    width:84px ;
+}
+input,select{
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: inset #4E467F  0px 0px  5px 1px;
+}
+.numero{
+    width: 60px;
+    margin-right: 10px;
+}
+#titular{
+    width: 300px;
+}
+#cvv{
+    width: 60px;
+}
+.boton{
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-weight: bold;
+    background-color: #6B5DCD;
+    color: ivory;
+    font-size: 15px;
+}
+#card{
+    display: none;
+}
