@@ -1,7 +1,5 @@
 import validator from './validator.js';
 
-console.log(validator);
-
 //FUNCION QUE LIMPIA EL FORMULARIO
 const limpiar=()=>{
   document.getElementById("titular").value=""; 

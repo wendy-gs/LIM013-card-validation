@@ -7,7 +7,7 @@ const validator = {
 	if(numcarater<=4){
     enmascarado=CardNumber;
   }else{
-    enmascarado=(CardNumber.replace(/[0-9]/g,"#")).slice(0,numcarater-4)+CardNumber.slice(numcarater-4);
+    enmascarado=(CardNumber.replace(/\w/g,"#")).slice(0,numcarater-4)+CardNumber.slice(numcarater-4);
   }
   return enmascarado;
 },
