@@ -39,8 +39,8 @@ nav ul li a:hover{
        padding:0px 60px;
 }
 section{
-    background: url(https://i.ibb.co/L1XhpLB/fondo.png);
-    height: 650px;
+    background: url("https://i.ibb.co/5LGr55q/nuevo-fondo.png");
+    height: 695px;
 }
 label{
     display: block;
@@ -55,13 +55,14 @@ fieldset{
 }
 .form{
     position: relative;
-    top:  20%;
+    top:  29%;
     width: 23%;
     margin: 0 auto;
     padding: 20px;
     border:#585858 3px solid ;
     border-radius: 15px;
     display: block;
+    background-color: #F6F3F6;
     
 }
 select{
@@ -83,7 +84,7 @@ input,select{
 #cvv{
     width: 60px;
 }
-.boton{
+.btn{
     width: 100%;
     height: 50px;
     border: none;
@@ -92,6 +93,61 @@ input,select{
     color: ivory;
     font-size: 15px;
 }
-#card{
+#btnContinuar{
+    width: 250px;
+    margin: 0 auto;
+    position: absolute;
+    top: 109%;
+    right: 33%;
+    background-color:#6B5DCD;
     display: none;
+}
+button:hover{
+    background-color: #9582B3;
+}
+#imgCard{
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    top:54%;
+    left:40%;
+}
+#cardNumber{
+    position: absolute;
+    top: 48%;
+    left: 17%;
+    width: 400px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+}
+#cardName{
+    position: absolute;
+    top: 58%;
+    left: 17%;
+     width: 400px;
+    font-size: 14px;
+    font-weight: bold;
+    color: aliceblue;
+}
+#mensajeError{
+    height: 92px;
+    width: 360px;
+    position: absolute;
+    top: 50%;
+    left: 37.8%;
+    display: none;
+    border: solid 5px #f16363;
+}
+#mensajeSeguro{
+    height: 70px;
+    position: absolute;
+    top: 73%;
+    left: 70%;
+}
+#candado{
+    height: 90px;
+    position: absolute;
+    top: 85%;
+    left: 73%;
 }

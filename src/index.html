@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function soloNumeros(e){
+        let keynum=e.keyCode || e.which;
+        let tecla=String.fromCharCode(keynum);
+        let numero="1234567890";
+        if(numero.indexOf(tecla)==-1){
+          return false;
+        } 
+}
+    </script>
   </head>
   <body>
     <header id=Portada>
@@ -20,22 +30,22 @@
     </nav>
     <section>
      
-      <form  class="form" autocomplete="off" id="formulario" >  
+      <form  class="form" autocomplete="off" id="formulario" action="">  
         <fieldset>
           <label for ="numero-tarjeta">Número de Tarjeta</label>
-          <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="numero" maxlength="4"/>
-          <input type="text" id="numero-tarjeta1" name="numero-tarjeta" class="numero" maxlength="4"/>
-          <input type="text" id="numero-tarjeta2" name="numero-tarjeta"  class="numero" maxlength="4"/>
-          <input type="text" id="numero-tarjeta3" name="numero-tarjeta" class="numero" maxlength="4"/>
+        <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
+          <input type="text" id="numero-tarjeta1" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
+          <input type="text" id="numero-tarjeta2" name="numero-tarjeta"  class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
+          <input type="text" id="numero-tarjeta3" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
         </fieldset>
         <fieldset>
           <label for="titular">Titular de la tarjeta</label>
-          <input type="text" id="titular" name="titular" placeholder="Nombre y Apellido"/>
+          <input type="text" id="titular" name="titular" placeholder="Nombre y Apellido" required/>
         </fieldset>
         <fieldset>
           <label for="expiracion">Fecha Expiración</label>
           <select id="mes-expiracion">
-            <option>Mes</option>
+            <option value="Mes">Mes</option>
             <option>01</option>
             <option>02</option>
             <option>03</option>
@@ -50,7 +60,7 @@
             <option>12</option>
           </select>
           <select id="age-expiracion">
-            <option>Año</option>
+            <option value="Año">Año</option>
             <option>2020</option>
             <option>2021</option>
             <option>2022</option>
@@ -66,13 +76,19 @@
         </fieldset>
         <fieldset>
           <label for="cvv">CVV</label>
-          <input type="text" id="cvv" maxlength="3"/>
+          <input type="text" id="cvv" maxlength="3" onkeypress="return soloNumeros(event)" required pattern="[0-9]{3}"/>
         </fieldset>
-        <button id="boton"type="submit"  class="boton" >VERIFICAR </button>
+        <button type="submit" id="boton" form="formulario" class="btn">VALIDAR  ➨</button>
       </form>
-      <div id="card">
-        <img src="https://i.ibb.co/47Lgsvn/credito.png">
+      <img id="mensajeSeguro" src="https://i.ibb.co/V31CJgr/compra.png">
+      <img id="candado" src="https://i.ibb.co/N1JtBtR/bolsa.png" height="150px">
+      <div id="imgCard">
+        <img src="https://i.ibb.co/tKQDXm9/TARJETA-V-LIDA.png">
+        <div id="cardNumber"></div>
+        <div id="cardName"></div>
       </div>
+      <img id="mensajeError" src="https://i.ibb.co/txkYBvG/ERROR.png">
+      <button type="button" id="btnContinuar" class="btn" >CONTINUAR  ➨</button>
     </section>
     <main></main>
     <footer></footer>
