@@ -1,8 +1,7 @@
-#Portada{
+header{
+    background: url(https://i.ibb.co/Qd5TpzP/portada.png) round;
+    height: 29vh;
   
-    margin: 0px;
-    height: 220px;
-    background: url("https://i.ibb.co/Qd5TpzP/portada.png") round ;
 }
 nav{
   
@@ -33,13 +32,9 @@ nav ul li a:hover{
     float: right;
     padding: 4px;
 }
-#carrito{
-       position: absolute;
-       top: 235px;
-       padding:0px 60px;
-}
+
 section{
-    background: url("https://i.ibb.co/5LGr55q/nuevo-fondo.png");
+    background: url("https://i.ibb.co/5LGr55q/nuevo-fondo.png") round;
     height: 695px;
 }
 .formulario_label{
@@ -174,7 +169,7 @@ select{
     height: 92px;
     width: 360px;
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 37.8%;
     border: solid 5px #f16363;
 }
