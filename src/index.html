@@ -30,21 +30,32 @@
     </nav>
     <section>
      
-      <form  class="form" autocomplete="off" id="formulario" action="">  
-        <fieldset>
-          <label for ="numero-tarjeta">Número de Tarjeta</label>
-        <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
-          <input type="text" id="numero-tarjeta1" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
-          <input type="text" id="numero-tarjeta2" name="numero-tarjeta"  class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
-          <input type="text" id="numero-tarjeta3" name="numero-tarjeta" class="numero" maxlength="4" onkeypress="return soloNumeros(event)" required pattern="[0-9]{4}"/>
+      <form  class="form" autocomplete="off" id="formulario" >  
+        <!--Grupo numero de tarjeta-->
+        <fieldset class="grupo_formulario" id="grupo_numero">
+          <label for ="numTarjeta" class="formulario_label">Número de Tarjeta</label>
+          <input type="text" id="numTarjeta" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234" />
+          <input type="text" id="numTarjeta1" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
+          <input type="text" id="numTarjeta2" name="numero"  class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)"placeholder="1234"/>
+          <input type="text" id="numTarjeta3" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
+          <div class="Ocultar" id="div_numero">
+          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <p class="formulario_parrafo_error">Debe ingresar cuatro números por casilla</p>
+        </div>
         </fieldset>
-        <fieldset>
-          <label for="titular">Titular de la tarjeta</label>
-          <input type="text" id="titular" name="titular" placeholder="Nombre y Apellido" required/>
+        <!--Grupo nombre del titular-->
+        <fieldset class="grupo_formulario" id="grupo_nombre">
+          <label for="nombre" class="formulario_label">Titular de la tarjeta</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" class="formulario_input"/>
+          <div class="Ocultar" id="div_nombre">
+          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <p class="formulario_parrafo_error">Debe ingresar nombres y apellidos completos</p>
+        </div>
         </fieldset>
-        <fieldset>
-          <label for="expiracion">Fecha Expiración</label>
-          <select id="mes-expiracion">
+        <!--Grupo Fecha de exiración de tarjeta-->
+        <fieldset class="grupo_formulario" id="grupo_fecha">
+          <label for="expiracion"  class="formulario_label">Fecha Expiración</label>
+          <select id="expiracion" class="formulario_input" name="fecha_mes">
             <option value="Mes">Mes</option>
             <option>01</option>
             <option>02</option>
@@ -59,7 +70,7 @@
             <option>11</option>
             <option>12</option>
           </select>
-          <select id="age-expiracion">
+          <select id="age-expiracion" class="formulario_input" name="fecha_año">
             <option value="Año">Año</option>
             <option>2020</option>
             <option>2021</option>
@@ -73,24 +84,42 @@
             <option>2029</option>
             <option>2030</option>
           </select>
+          <div class="Ocultar" id="div_fecha">
+         <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <p class="formulario_parrafo_error">Debe seleccionar el mes y el año de expiración</p>
+        </div>
         </fieldset>
-        <fieldset>
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" maxlength="3" onkeypress="return soloNumeros(event)" required pattern="[0-9]{3}"/>
+        <!--Grupo cvv de la tarjeta-->
+        <fieldset class="grupo_formulario" id="grupo_cvv">
+          <label for="cvv" class="formulario_label">CVV</label>
+          <input type="text" id="cvv" maxlength="3" class="formulario_input" name="cvv_tarjeta"/>
+          <div class="Ocultar" id="div_cvv">
+          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <p class="formulario_parrafo_error">El CVV tiene 3 dígitos</p>
+        </div>
         </fieldset>
+        <div class="formulario_mensaje Ocultar" id="formulario_mensaje">
+          <p><img src="https://i.ibb.co/SJrcRPN/Imagen5.png"><b> Error: </b>Por favor rellene los campos correctamente</p>
+        </div>
+        <div class="grupo_btn">
         <button type="submit" id="boton" form="formulario" class="btn">VALIDAR  ➨</button>
+      </div>
       </form>
-      <img id="mensajeSeguro" src="https://i.ibb.co/V31CJgr/compra.png">
-      <img id="candado" src="https://i.ibb.co/N1JtBtR/bolsa.png" height="150px">
-      <div id="imgCard">
+      <!--Grupo seguiridad-->
+      <div id="logos_seguridad" class="Mostrar"></div>
+        <img id="mensajeSeguro" src="https://i.ibb.co/V31CJgr/compra.png">
+        <img id="candado" src="https://i.ibb.co/N1JtBtR/bolsa.png">
+      </div>
+      <!--Grupo validacion correcta-->
+      <div id="imgCard" class="Ocultar">
         <img src="https://i.ibb.co/tKQDXm9/TARJETA-V-LIDA.png">
         <div id="cardNumber"></div>
         <div id="cardName"></div>
+        <button type="button" id="btnContinuar" class="btn" >CONTINUAR  ➨</button>
       </div>
-      <img id="mensajeError" src="https://i.ibb.co/txkYBvG/ERROR.png">
-      <button type="button" id="btnContinuar" class="btn" >CONTINUAR  ➨</button>
+      <img id="mensajeError" class="Ocultar" src="https://i.ibb.co/txkYBvG/ERROR.png">
     </section>
-    <main></main>
+    
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>

@@ -42,12 +42,12 @@ section{
     background: url("https://i.ibb.co/5LGr55q/nuevo-fondo.png");
     height: 695px;
 }
-label{
+.formulario_label{
     display: block;
-    text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
-    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
 }
 fieldset{
     border: none;
@@ -56,61 +56,100 @@ fieldset{
 .form{
     position: relative;
     top:  29%;
-    width: 23%;
+    width: 26%;
     margin: 0 auto;
     padding: 20px;
     border:#585858 3px solid ;
     border-radius: 15px;
-    display: block;
     background-color: #F6F3F6;
-    
 }
 select{
     width:84px ;
 }
-input,select{
+
+.formulario_input, .formulario_input1{
     height: 30px;
-    border: 1px solid;
+    width: 17%;
+    margin-right: 10px;
+    border: 1px solid transparent;
     border-radius: 5px;
     box-shadow: inset #4E467F  0px 0px  5px 1px;
+    transform: .3s ease all;
 }
-.numero{
-    width: 60px;
-    margin-right: 10px;
+.formulario_input:focus,.formulario_input1:focus {
+    border: 2px solid #7A41A2;
+    outline: none;
 }
-#titular{
+.formulario_parrafo_error{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.Mostrar{
+    display: block;
+}
+.formulario_validacion{
+    position: absolute;
+    right: 25px;
+    bottom: 40px;
+}
+.formulario_mensaje{
+    height: 50px;
+    line-height: 50px;
+    padding: 1px 15px;
+    background: #FC7988;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario_mensaje p{
+    margin:  0px;
+}
+.Ocultar{
+    display: none;
+}
+.formulario_grupo_incorrecto .formulario_label{
+    color:#C7192D;
+}
+.formulario_grupo_incorrecto .formulario_input{
+    border: 2px solid #C7192D;
+}
+
+#nombre{
     width: 300px;
 }
 #cvv{
     width: 60px;
 }
+.grupo_btn{
+    display: flex;
+    justify-content: center;
+}
 .btn{
-    width: 100%;
+    width: 55%;
     height: 50px;
     border: none;
     font-weight: bold;
     background-color: #6B5DCD;
     color: ivory;
     font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
 }
 #btnContinuar{
-    width: 250px;
     margin: 0 auto;
     position: absolute;
-    top: 109%;
-    right: 33%;
-    background-color:#6B5DCD;
-    display: none;
+    top: 80%;
+    right: 15%;
 }
-button:hover{
+.btn:hover{
     background-color: #9582B3;
 }
 #imgCard{
-    display: none;
     margin: 0 auto;
     position: absolute;
-    top:54%;
-    left:40%;
+    top:56%;
+    left:35%;
 }
 #cardNumber{
     position: absolute;
@@ -134,9 +173,8 @@ button:hover{
     height: 92px;
     width: 360px;
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 37.8%;
-    display: none;
     border: solid 5px #f16363;
 }
 #mensajeSeguro{
