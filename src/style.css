@@ -1,10 +1,15 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 header{
-    background: url(https://i.ibb.co/Qd5TpzP/portada.png) round;
+    background: url(https://i.ibb.co/ZSsQxt8/portada.png) no-repeat center;
+   background-size: cover;
     height: 29vh;
-  
+    width: 100%;
 }
 nav{
-  
     background-color:#FCE2EE;
 }
 li{
@@ -34,8 +39,10 @@ nav ul li a:hover{
 }
 
 section{
-    background: url("https://i.ibb.co/5LGr55q/nuevo-fondo.png") round;
-    height: 695px;
+    background: url("https://i.ibb.co/qBcM417/fondo-mod.png") no-repeat  center;
+    background-size: cover;
+    height: 108%;
+    width:100% ;
 }
 .formulario_label{
     display: block;
@@ -85,13 +92,11 @@ select{
 }
 .formulario_validacion{
     position: absolute;
-    right: 25px;
-    bottom: 40px;
+    right: 2%;
+    bottom: 40%;
 }
 .formulario_mensaje{
-    height: 50px;
-    line-height: 50px;
-    padding: 1px 15px;
+    padding: 15px 15px;
     background: #FC7988;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -111,7 +116,7 @@ select{
 }
 
 #nombre{
-    width: 300px;
+    width: 82%;
 }
 #cvv{
     width: 60px;
@@ -184,4 +189,9 @@ select{
     position: absolute;
     top: 85%;
     left: 73%;
+}
+footer p{
+    text-align:center;
+    margin-top: 0px;
+	background-color: #D3CBDA;
 }
