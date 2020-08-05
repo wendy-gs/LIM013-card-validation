@@ -1,7 +1,7 @@
 import validator from './validator.js';
 
 
-//CREAMOS FUNCION DESPUES DE VALIDAR EL FORMULARIO
+//CREAMOS FUNCION QUE VALIDA Y ENMASCARA EL NUMERO DE TARJETA
 const load=()=>{
   let number="";
   for(let i=0;i<4;i++){
@@ -9,8 +9,7 @@ const load=()=>{
     number+=j;
   }
   let nombre=document.getElementById("nombre").value;
-
-//VERIFICACION DE LA TARJETA
+//Verificacion dela tarjeta
   if(validator.isValid(number)){
     document.getElementById("formulario").classList.add("Ocultar");
     document.getElementById("imgCard").classList.remove("Ocultar");
@@ -30,8 +29,8 @@ const load=()=>{
     form.reset();
   }
 }
-//pasar automaticamente de input
 
+//PASAR AUTOMATICAMENTE DE UN INPUT A OTRO
   const num1=document.getElementById("numTarjeta");
   const num2=document.getElementById("numTarjeta1");
   const num3=document.getElementById("numTarjeta2");
@@ -57,7 +56,8 @@ const load=()=>{
     document.getElementById("nombre").focus();
   }
   });
-//oBjeto de expresiones regulares para verificar el formulario
+
+//OBJETO DE EXPRESIONES REGULARES PARA VERIFIACION DEL FORMULARIO
 const expr={
   numero:/^\d{4,4}$/,
   nombre:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ /s]*$/,
@@ -71,7 +71,8 @@ const camposValidos={
   nombre:false,
   cvv:false,
 }
-//Validamos los campos del formulario
+
+//VALIDAMOS LOS CAMPOS DEL FORMULARIO
 const validarCampo=(expresion,input,grupo)=>{
   if(expresion.test(input.value)){
     document.getElementById(`grupo_${grupo}`).classList.remove("formulario_grupo_incorrecto")
@@ -84,6 +85,7 @@ const validarCampo=(expresion,input,grupo)=>{
     camposValidos[grupo]=false;
   }
 }
+
 //VALIDAMOS LOS CAMPOS DEL FORMULARIO
 const validarFormulario=(e)=>{
   switch(e.target.name){
@@ -122,6 +124,8 @@ const validarFormulario=(e)=>{
       }
     })
   }) 
+
+  //VALIDAMOS QUE EL CAMPO FECHA SE SELECCIONE
   const validarFecha=()=>{
     if(document.getElementById("expiracion").value!="Mes" &&  document.getElementById("age-expiracion").value!="Año"){
       return true;
@@ -131,11 +135,27 @@ const validarFormulario=(e)=>{
       return false;
     }
   }
+
+  // VALIDAMOS QUE EL INPUT DE NUMERO TARJETA Y CVV SOBRE SE PUEDA ESCRIBIR NUMEROS
+const validarNumero=()=>{
+  let keynum=event.keyCode || event.which;
+  let tecla=String.fromCharCode(keynum);
+  let numero="1234567890";
+  if(numero.indexOf(tecla)==-1){
+    event.preventDefault();
+  } 
+}
+document.getElementById("cvv").addEventListener("keypress",validarNumero);
+const casillaNumero=document.querySelectorAll('.formulario_input1');
+casillaNumero.forEach((casilla)=>{
+  casilla.addEventListener("keypress",validarNumero);
+});
+
   const inputs= document.querySelectorAll('#formulario input');
   inputs.forEach((input)=>{
     input.addEventListener("keyup",validarFormulario)
     input.addEventListener("blur",validarFormulario)
-  })
+  });
 
   const form=document.getElementById("formulario");
   form.addEventListener('submit',(e)=>{

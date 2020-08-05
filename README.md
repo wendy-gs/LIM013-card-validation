@@ -4,7 +4,7 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [3. Especificaciones Técnicas](#3-especificaciones-técnicas)
 * [4. Investigación UX](#4-investigación-ux)
 
 ***
@@ -21,20 +21,15 @@ solamente contiene dígitos [0-9]); a todos los números que ocupan una posició
 par se les debe multiplicar por dos, si este número es mayor o igual a 10,
 debemos sumar los dígitos del resultado; el número a verificar será válido si
 la suma de sus dígitos finales es un múltiplo de 10.
+<center>Gráfico N°1: Algoritmo de Luhn</center>
 
 ![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
 ## 2. Resumen del proyecto
-Se desarrollo un página web de una tienda online de ventas de productos
-de postres saludables, que el objetivo principal fue crear las vista de 
-validación de la tarjeta utilizando el algoritmo  Luhn y enmascarando los
-últimos 4 digitos de la tarjeta.
+Se desarrollo un página web de una tienda online de postres saludables, ya que en la actualidad hay un alta tendencia en buscar una alimentación saludable y no existe ninguna página web en Perú sobre ventas de estos productos y solo comercializa atraves de las plataformas de fb o instagram.
 
-## 3. Objetivos de aprendizaje
-
-Aprenderás a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
+## 3. Especificaciones Técnicas
+Para desarrollar el proyecto de validación de tarjeta se utilizo HTML, CSS y JavaScript como tecnologías.
 
 ### HTML y CSS
 
@@ -81,41 +76,67 @@ como tecnologías.
 ## 4. Investigación UX
 
 ### Público objetivo
-Nuestro público objetivo serían hombres y mujeres entre los 20 y 60 años de edad,
+Nuestro público objetivo serán hombres y mujeres entre los 20 y 60 años de edad,
 que practican alguna actividad física o  personas que se preocupan por una alimentación 
 sana.
 
 ### Solución del problema/ necesidad
-Hoy por hoy la conciencia sobre alimentarse bien, cada vez es mayor, 
-las personas ante la necesidad de comer de manera saludable, se muestran más
-preocupadas en la seleccion de sus comidas y más  la hora de darse un gusto 
-con algún postre ya que son estos son los alimentos que tiene un alto porcentaje de grasas
-saturas, harinas refinadas, etc. Es por ello y viendo que no existe una tienda
-online de ventas de postres saludables en Lima ya que solo se venden este tipo de 
-productos por las plataformas de fb o instagram se decidio crear esta tienda online de 
-Postres Fit.
+El sobrepeso y la obesidad son grandes males que afectan al Perú, según IPSOS en su estudio de ["Alimentación y vida
+saludable en Lima"](https://www.ipsos.com/sites/default/files/ct/publication/documents/2019-10/vida_saludable.pdf) en el año 2019 dio como resultado el 47% tiene UN IMC adecuado, 29% tiene sobrepeso y 18% tiene obesidad.
+Es por ello que la tendencia de buscar una alimentación saludable va creciendo y expandiéndose,
+y cada vez más peruanos buscan consumir frutas, verduras, beber  agua y leer la información en las etiquetas de los empaques, por lo antes mencionado se da la propuesta de negocio “Postres Fit” con el fin de proponer mediante esta alternativa
+nuevos hábitos saludables, agradables y de costos asequibles al consumidor.<br>
+
+<center>Gráfico N°2: Alimentación saludable en Lima</center>
+
+![gráfica Inei](https://i.ibb.co/rv1xjWS/inei.jpg)
+<br><br>
+<center>Gráfico N°3: Perfil Nutricional</center>
+
+![gráfica Ipsos](https://i.ibb.co/51mM0wb/vida-saludable.png)
 
 ### Prototipo en papel
-Se muestra la idea de como sería nuestra online especificamente las vistas de la 
-validación de las tarjetas.
+Se prototipo en base a una lluvia de ideas sobre negocios virtuales y de la cual se eligio sobre postres saludables.
+
+<center>Gráfico N°4: Vista 1</center>
+
 ![gráfica de prototipo vista 1](https://i.ibb.co/njqVbtk/prototipo1.jpg)
+En estas vista son de ingreso a la tienda online y seleccionar el botón de pagar, y nos abrira la siguiente vista donde se tendra que rrellenar el formulario con los datos de la tarjeta.
+<br>
+<center>Gráfico N°5: Vista 2</center>
+
 ![gráfica de prototipo vista 2](https://i.ibb.co/9tHBHSj/prototipo1-1.jpg)
+En esta segunda vista nos muestra el mesaje si la tarjeta es correcta nos saldra el botón de seguir o de lo contrario saldra un mensaje de error.
 
 ### Prototipo en figma
 Despues de hacer un feedback con mis compañeras lo plasme todo en un prototipo
 en figma al ser un sofwtare de alta fidelidad se definio los colores que se usaria para la web
 
+<center>Gráfico N°6: Prototipo Figma</center>
+
 ![gráfica figma](https://i.ibb.co/BqVZ2Dp/figma.png)
 
-### Vistas de la página
-Vista Formulario: Aqui se debe llenar los datos de la tarjeta a validar.
+## 5. Interfaz Usuario(UI)
+### Insertar número de tarjeta a validar:
+Se creo un input donde se ingresara el número de tarjeta y se validará que solo se ingresa números no se permitira el ingreso de letras ni de simbolos especiales.
 
-![gráfica vista 1](https://i.ibb.co/YPjPZ44/vista1.png)
+<center>Gráfico N°7: Vista Formulario</center>
 
-Vista de Error: Se muestra un mensaje de error y se pide que vuelva llenar con datos de una tarjeta válida.
+![gráfica vista 1](https://i.ibb.co/DDN2sR2/formulario.png)
 
-![gráfica vista 2](https://i.ibb.co/yVDt357/vista2.png)
+### Resultado inválido:
+Si al ingresar un número de tarjeta inválido saldra un mensaje de error y se reseteara todos los campos del formulario.
 
-Vista Correcta: Se muestra el mensaje de que la tarjeta es válida y se enmascara los digitos de la tarjeta menos las ultimas 4.
-![gráfica vista 3](https://i.ibb.co/2NhRHTf/vista3.png)
+<center>Gráfico N°8: Vista Error</center>
+
+![gráfica vista 2](https://i.ibb.co/SJ5ZQG2/mensaje-error.png)
+
+### Resultado válido:
+Si el número de la tarjeta es válido saldra un mensaje de validación y se mostrara el número de la tarjeta enmascarada solo siendo visible los 4 últimos digitos y el nombre del titular que se ingreso.
+
+<center>Gráfico N°9: Mensaje correcto</center>
+
+![gráfica valida](https://i.ibb.co/YyLjgx8/valida.png)
+
+
 

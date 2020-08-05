@@ -4,16 +4,6 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      function soloNumeros(e){
-        let keynum=e.keyCode || e.which;
-        let tecla=String.fromCharCode(keynum);
-        let numero="1234567890";
-        if(numero.indexOf(tecla)==-1){
-          return false;
-        } 
-}
-    </script>
   </head>
   <body>
     <header id="Portada">
@@ -33,10 +23,10 @@
         <!--Grupo numero de tarjeta-->
         <fieldset class="grupo_formulario" id="grupo_numero">
           <label for ="numTarjeta" class="formulario_label">Número de Tarjeta</label>
-          <input type="text" id="numTarjeta" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
-          <input type="text" id="numTarjeta1" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
-          <input type="text" id="numTarjeta2" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
-          <input type="text" id="numTarjeta3" name="numero" class="formulario_input1" maxlength="4" onkeypress="return soloNumeros(event)" placeholder="1234"/>
+          <input type="text" id="numTarjeta" name="numero" class="formulario_input1" maxlength="4"  placeholder="1234"/>
+          <input type="text" id="numTarjeta1" name="numero" class="formulario_input1" maxlength="4" placeholder="1234"/>
+          <input type="text" id="numTarjeta2" name="numero" class="formulario_input1" maxlength="4" placeholder="1234"/>
+          <input type="text" id="numTarjeta3" name="numero" class="formulario_input1" maxlength="4" placeholder="1234"/>
           <div class="Ocultar" id="div_numero">
           <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png">
           <p class="formulario_parrafo_error">Debe ingresar cuatro números por casilla</p>
