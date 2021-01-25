@@ -65,7 +65,7 @@ fieldset{
 }
 .form{
     position: relative;
-    top:  29%;
+    top:  25%;
     width: 26%;
     margin: 0 auto;
     padding: 20px;
@@ -181,8 +181,8 @@ select{
     height: 92px;
     width: 360px;
     position: absolute;
-    top: 52%;
-    left: 37.8%;
+    top: 48%;
+    left: 37.6%;
     border: solid 5px #f16363;
 }
 #mensajeSeguro{
