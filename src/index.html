@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
   </head>
   <body>
     <header id="Portada">
@@ -14,7 +15,11 @@
         <li><a class="barra" href="#">Costos Delivery</a></li>
         <li><a class="barra" href="#">Contacto</a></li>
         <li><a class="barra" href="#">Mi cuenta</a></li>
-        <li id="redes"><img src="https://i.ibb.co/b70p489/redes.png" alt="redes"> </li>
+        <div id="redes">
+          <li><a class="barra" href="#"><i class="cib-facebook"></i></a></li>
+          <li><a class="barra" href="#"><i class="cib-instagram"></i></a></li>
+          <li><a class="barra" href="#"><i class="cib-whatsapp"></i></a></li>
+      </div>
       </ul>
     </nav>
     <section>
@@ -28,7 +33,7 @@
           <input type="text" id="numTarjeta2" name="numero" class="formulario_input1" maxlength="4" placeholder="1234"/>
           <input type="text" id="numTarjeta3" name="numero" class="formulario_input1" maxlength="4" placeholder="1234"/>
           <div class="Ocultar" id="div_numero">
-          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png">
+          <img class="formulario_validacion" src="../img/x.png">
           <p class="formulario_parrafo_error">Debe ingresar cuatro números por casilla</p>
         </div>
         </fieldset>
@@ -37,7 +42,7 @@
           <label for="nombre" class="formulario_label">Titular de la tarjeta</label>
           <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" class="formulario_input"/>
           <div class="Ocultar" id="div_nombre">
-          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <img class="formulario_validacion" src="../img/x.png" >
           <p class="formulario_parrafo_error">Debe ingresar nombres y apellidos completos</p>
         </div>
         </fieldset>
@@ -74,7 +79,7 @@
             <option>2030</option>
           </select>
           <div class="Ocultar" id="div_fecha">
-         <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+         <img class="formulario_validacion" src="../img/x.png" >
           <p class="formulario_parrafo_error">Debe seleccionar el mes y el año de expiración</p>
         </div>
         </fieldset>
@@ -83,12 +88,12 @@
           <label for="cvv" class="formulario_label">CVV</label>
           <input type="text" id="cvv" maxlength="3" class="formulario_input" name="cvv_tarjeta"/>
           <div class="Ocultar" id="div_cvv">
-          <img class="formulario_validacion" src="https://i.ibb.co/4dRqxmJ/x.png" >
+          <img class="formulario_validacion" src="../img/x.png" >
           <p class="formulario_parrafo_error">El CVV tiene 3 dígitos</p>
         </div>
         </fieldset>
         <div class="formulario_mensaje Ocultar" id="formulario_mensaje">
-          <p><img src="https://i.ibb.co/SJrcRPN/Imagen5.png"><b> Error: </b>Por favor rellene los campos correctamente</p>
+          <p><img src="../img/incorrecto.png"><b> Error: </b>Por favor rellene los campos correctamente</p>
         </div>
         <div class="grupo_btn">
         <button type="submit" id="boton" form="formulario" class="btn">VALIDAR  ➨</button>
@@ -96,17 +101,17 @@
       </form>
       <!--Grupo seguiridad-->
       <div id="logos_seguridad" class="Mostrar">
-        <img id="mensajeSeguro" src="https://i.ibb.co/V31CJgr/compra.png">
-        <img id="candado" src="https://i.ibb.co/N1JtBtR/bolsa.png">
+        <img id="mensajeSeguro" src="../img/compra.png">
+        <img id="candado" src="../img/bolsa.png">
       </div>
       <!--Grupo validacion correcta-->
       <div id="imgCard" class="Ocultar">
-        <img src="https://i.ibb.co/tKQDXm9/TARJETA-V-LIDA.png">
+        <img src="../img/TARJETA.png">
         <div id="cardNumber"></div>
         <div id="cardName"></div>
         <button type="button" id="btnContinuar" class="btn" >CONTINUAR  ➨</button>
       </div>
-      <img id="mensajeError" class="Ocultar" src="https://i.ibb.co/txkYBvG/ERROR.png">
+      <img id="mensajeError" class="Ocultar" src="../img/incorrecto.png">
     </section>
     
     <footer>

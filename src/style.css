@@ -4,8 +4,8 @@ html, body{
     margin: 0;
 }
 header{
-    background: url(https://i.ibb.co/ZSsQxt8/portada.png) no-repeat center;
-   background-size: cover;
+    background: url("../img/portada.png") no-repeat center;
+    background-size: cover;
     height: 29vh;
     width: 100%;
 }
@@ -17,6 +17,9 @@ li{
     display: inline-block;
 }
 ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -34,14 +37,18 @@ nav ul li a:hover{
     background-color:#d1a1b2;
 }
 #redes{
-    float: right;
-    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
+#redes .barra {
+    padding: 8px 10px;
+    font-size: 25px;
 }
 
 section{
-    background: url("https://i.ibb.co/RY3d4c4/fondo-mod.png") no-repeat  center;
+    background: url("../img/fondo.png") no-repeat  center;
     background-size: cover;
-    height: 108%;
+    height: 100vh;
     width:100% ;
 }
 .formulario_label{

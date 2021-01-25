@@ -27,11 +27,11 @@ isValid: function(CardNumber){
     variable=parseInt(inversa[i]);
     if(i%2!=0){
       variable=variable*2;
-    if(variable>=10){
+      if(variable>=10){
       pares+=(variable%10)+(Math.floor(variable/10));
-		}else{
+		  }else{
       pares+=variable;
-		}
+		  }
     }else{
     impares+=variable;	
     }
